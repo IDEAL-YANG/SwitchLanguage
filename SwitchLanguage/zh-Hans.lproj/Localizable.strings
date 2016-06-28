@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  SwitchLanguage
+
+  Created by apple on 2016/6/28.
+  Copyright © 2016年 New Idea. All rights reserved.
+*/
+"First View" = "第一个视图";
+"First Description" = "这个视图来此第一视图控制器";
+
+"Second View" = "第二个视图";
+"Setting" = "设置";
+
+"Setting Language" = "设置语言";
+"Current Language" = "当前语言";
+"Setting Language..." = "正在设置语言...";

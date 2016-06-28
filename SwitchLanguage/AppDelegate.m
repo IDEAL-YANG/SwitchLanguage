@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [SVProgressHUD setMinimumDismissTimeInterval:2.0];
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
     return YES;
 }
 
