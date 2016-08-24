@@ -19,6 +19,13 @@
     // Override point for customization after application launch.
     [SVProgressHUD setMinimumDismissTimeInterval:2.0];
     [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+    
+    //自定义返回按钮
+//    UIImage *backButtonImage = [[UIImage imageNamed:@""] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    //将返回按钮的文字position设置不在屏幕上显示
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 
