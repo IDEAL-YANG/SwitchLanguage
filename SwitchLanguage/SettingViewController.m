@@ -66,14 +66,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [SVProgressHUD showWithStatus:LMLocalizedString(@"Setting Language...", nil)];
-    [[LanguageManager shareInstance] setAppLanguageWithLanguageIndex:indexPath.row complete:^(BOOL success) {
-        if (success) {
-            [SVProgressHUD showSuccessWithStatus:nil];
-        }else{
-            [SVProgressHUD showErrorWithStatus:nil];
-        }
-    }];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.accessoryType == UITableViewCellAccessoryNone) {
+        [SVProgressHUD showWithStatus:LMLocalizedString(@"Setting Language...", nil)];
+        [[LanguageManager shareInstance] setAppLanguageWithLanguageIndex:indexPath.row complete:^(BOOL success) {
+            if (success) {
+                [SVProgressHUD showSuccessWithStatus:nil];
+            }else{
+                [SVProgressHUD showErrorWithStatus:nil];
+            }
+        }];
+    }
 }
 
 /*
